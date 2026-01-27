@@ -83,20 +83,34 @@ const obj = {a: 1,b: {c: 2,d: {e: 3}}};
 //     return evenNums 
 // }
 // const nums = findEvenNums(array);
-
-const arr = [1,1,2,2,2,3,3,4,4,4,5,5,6,7]
-let x =0
-function findDuplicates(){
-for (let i = 0; i<arr.length; i++){
-   if(arr[i]>arr[x]){
-    x=x+1;
-    arr[x]= arr[i]
-   }
+// Remove duplicates from array and find unique numbers in arrays
+// const arr = [1,1,2,2,2,3,3,4,4,4,5,5,6,7]
+// let x =0
+// function findDuplicates(){
+// for (let i = 0; i<arr.length; i++){
+//    if(arr[i]>arr[x]){
+//     x=x+1;
+//     arr[x]= arr[i]
+//    }
    
 
-}
-return x+1
+// }
+// return x+1
+// }
+
+// const nums = findDuplicates();
+// console.log(arr.slice(0,nums))
+
+// count the number of digits
+
+function countNumsOfDigits(n){
+let count = 0
+while(n>0){
+   n = Math.floor(n/10)
+   count ++
+} 
+return count
 }
 
-const nums = findDuplicates();
-console.log(arr.slice(0,nums))
+const nums = countNumsOfDigits(12345);
+console.log(nums)
