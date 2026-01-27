@@ -103,14 +103,31 @@ const obj = {a: 1,b: {c: 2,d: {e: 3}}};
 
 // count the number of digits
 
-function countNumsOfDigits(n){
-let count = 0
-while(n>0){
-   n = Math.floor(n/10)
-   count ++
-} 
-return count
+// function countNumsOfDigits(n){
+// let count = 0
+// while(n>0){
+//    n = Math.floor(n/10)
+//    count ++
+// } 
+// return count
+// }
+
+// const nums = countNumsOfDigits(12345);
+// console.log(nums)
+
+// check if numbers are palindrone
+
+function isNumsPalindrone(n){
+   let rev = 0;
+   let newNum = n
+   while(n>0){
+      
+     let rem = n%10
+     rev = (10*rev) + rem;
+     n = Math.floor(n/10)
+   }
+   return rev===newNum
 }
 
-const nums = countNumsOfDigits(12345);
+const nums = isNumsPalindrone(125);
 console.log(nums)
