@@ -117,17 +117,48 @@ const obj = {a: 1,b: {c: 2,d: {e: 3}}};
 
 // check if numbers are palindrone
 
-function isNumsPalindrone(n){
-   let rev = 0;
-   let newNum = n
-   while(n>0){
+// function isNumsPalindrone(n){
+//    let rev = 0;
+//    let newNum = n
+//    while(n>0){
       
-     let rem = n%10
-     rev = (10*rev) + rem;
-     n = Math.floor(n/10)
-   }
-   return rev===newNum
-}
+//      let rem = n%10
+//      rev = (10*rev) + rem;
+//      n = Math.floor(n/10)
+//    }
+//    return rev===newNum
+// }
 
-const nums = isNumsPalindrone(125);
-console.log(nums)
+// const nums = isNumsPalindrone(125);
+// console.log(nums)
+// reverse the numbers
+// let num = 12345
+// function reverseNums(){
+   
+//    let rev = 0
+
+// while(num>0){
+//    let rem = num%10;
+//    rev = (10*rev) + rem;
+//    num = Math.floor(num/10)
+
+// }
+// return rev
+// }
+// const nums = reverseNums();
+// console.log(nums);
+// remov element from the array
+let arr =[1,2,3,4,5,6,7]
+val=3
+function removElements(arr,val){
+   let x =0;
+for(let i=0;i<arr.length;i++){
+   if(arr[i] !==val){
+      arr[x]=arr[i]
+      x=x+1
+   }
+}
+return x;
+}
+const nums = removElements(arr,3);
+console.log(arr.slice(0,nums))
